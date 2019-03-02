@@ -25,7 +25,7 @@ class CardGame
     end
   end
 
-  #typo 'dif' instead of 'def'
+  #typo 'dif' instead of 'def'.  Plus the parameters should be separated by a comma
   dif highest_card(card1 card2)
   if card1.value > card2.value
     #card is not a parameter.  
