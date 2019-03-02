@@ -38,7 +38,7 @@ class CardGame
     card2
   end
 end
-#extra 'end' that is not required
+#extra 'end' that is not required.  Should instead be at the end of the entire class codeblock 
 end
 
 #there is no need to include the 'self' prefix code here
