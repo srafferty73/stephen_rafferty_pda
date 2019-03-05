@@ -15,6 +15,7 @@
 require_relative('card.rb')
 class CardGame
 
+# We are missing an initialize constructor here
 
   def checkforAce(card)
     #single equals is assignment, we require double equals for comparison
@@ -28,21 +29,19 @@ class CardGame
   #typo 'dif' instead of 'def'.  Plus the parameters should be separated by a comma
   dif highest_card(card1 card2)
   if card1.value > card2.value
-    #card is not a parameter.  
-    #Since we are returning the highest_card, it should probably be just card1
-    #Within the card.rb file, there is also no *.name assigned.
+
+    #card is not passed as a parameter. Needs to be either card1 or card2 here.
+    #Within the card.rb file, there is also no *.name property assigned.
     return card.name
   else
     #following the 'if' situation above, this is ok to return
-    #since card2 would be the highest_card.  Again, there's no *.name assigned
+    #since card2 would be the highest_card.  Again, there's no *.name property assigned
     card2
   end
 end
-#extra 'end' that is not required.  Should instead be at the end of the entire class codeblock 
+#extra 'end' that is not required.  Should instead be at the end of the entire class codeblock
 end
 
-#there is no need to include the 'self' prefix code here
-#since there is no ambiguity as to which part of the code is being accessed.
 def self.cards_total(cards)
 
   #total needs to be assigned a default value of some sort
@@ -51,7 +50,7 @@ def self.cards_total(cards)
   total
   for card in cards
     total += card.value
-    return "You have a total of" + total
+    return "You have a total of" + total    #this return needs to be outside the for loop
   end
 end
 
