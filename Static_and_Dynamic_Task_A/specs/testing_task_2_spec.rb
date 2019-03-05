@@ -1,19 +1,19 @@
 require("minitest/autorun")
 require("minitest/rg")
 
-require_relative("../testing_task_2.rb")
 require_relative("../card.rb")
+require_relative("../testing_task_2.rb")
 
 class TestingTask2Test < MiniTest::Test
 
   def setup
     @card1 = Card.new("spades", 6)
     @card2 = Card.new("clubs", 5)
-    @cards = [@card1, @card2]
+    @cardgame = CardGame.new([@card1, @card2])
   end
 
   def test_card_has_suit
-    assert_equal("spades", @card1.suit())
+    assert_equal("spades", @cardgame.suit())
   end
 
   def test_card_has_value
@@ -21,11 +21,11 @@ class TestingTask2Test < MiniTest::Test
   end
 
   def test_checkForAce
-    assert_equal(false, checkforAce(@card1))
+    assert_equal(false, checkForAce(@card1))
   end
 
   def test_highest_card
-    assert_equal(@card1, highest_card(@card1, @card2))
+    assert_equal(@cardgame, highest_card(@card1, @card2))
   end
 
   def test_cards_total

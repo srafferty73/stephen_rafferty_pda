@@ -6,9 +6,15 @@
 require_relative('./card.rb')
 class CardGame
 
+  attr_reader :cards
 
-  def checkforAce(card)
-    if card.value = 1
+  def initialize(cards)
+    @cards = cards
+  end
+
+
+  def checkForAce(cards)
+    if cards[@card][@value] == 1
       return true
     else
       return false
@@ -16,10 +22,10 @@ class CardGame
   end
 
   def highest_card(card1, card2)
-  if card1.value > card2.value
-    return card.name
+  if @card1.value > @card2.value
+    return @card1
   else
-    card2
+    return @card2
   end
 end
 #end
